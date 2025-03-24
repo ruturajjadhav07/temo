@@ -5,20 +5,35 @@ import AddUserForm from "./AddUserForm";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
-  const [showUserForm, setShowUserForm] = useState(false);
-  const [showBuildingForm, setShowBuildingForm] = useState(false);
+  // const [showUserForm, setShowUserForm] = useState(false);
+  // const [showBuildingForm, setShowBuildingForm] = useState(false);
+
+  const showUserForm = (e) => {
+    e.preventDefault();
+    navigate("/form");
+  };
+
+  const showBuildingForm = (e) => {
+    e.preventDefault();
+    navigate("/tank-form");
+  };
 
   return (
-    <div className="container mt-4 text-center">
-      <h2>Admin Dashboard</h2>
-      <button className="btn btn-success me-2" onClick={() => setShowUserForm(!showUserForm)}>Add User</button>
-      <button className="btn btn-warning" onClick={() => setShowBuildingForm(!showBuildingForm)}>Add Building</button>
+    <div className="d-flex justify-content-center align-items-center vh-100">
+      <div className="container mt-4 text-center">
+        <h2>Admin Dashboard</h2>
+        <button className="btn btn-success me-2" onClick={showUserForm}>
+          Add User
+        </button>
+        <button className="btn btn-warning" onClick={showBuildingForm}>
+          Add Building
+        </button>
 
-      {showUserForm && <AddUserForm />}
-      {showBuildingForm && <AddBuildingForm />}
-
-      <br />
-      <button className="btn btn-danger mt-3" onClick={() => navigate("/")}>Logout</button>
+        <br />
+        <button className="btn btn-danger mt-3" onClick={() => navigate("/")}>
+          Logout
+        </button>
+      </div>
     </div>
   );
 };
