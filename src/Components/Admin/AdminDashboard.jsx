@@ -41,9 +41,9 @@ const AdminDashboard = () => {
       <div className="flex-grow-1 d-flex justify-content-center align-items-start p-5">
         {activeTab === "addUser" && (
           <div className="container col-md-4">
-            <h3 className="mb-4">Add User</h3>
+            <h3 className="mb-4 text-center">Add User</h3>
             <form>
-              <div className="form-group mb-3">
+              <div className="form-group mb-2">
                 <input
                   type="text"
                   className="form-control"
@@ -52,12 +52,21 @@ const AdminDashboard = () => {
                   required
                 />
               </div>
-              <div className="form-group mb-3">
+              <div className="form-group mb-2">
                 <input
                   type="password"
                   className="form-control"
                   placeholder="Password"
                   name="password"
+                  required
+                />
+              </div>
+              <div className="form-group mb-2">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Building Name"
+                  name="buildingName"
                   required
                 />
               </div>
