@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
 import Atri from "../assets/Atri.jpg";
 import Content from "../components/Sections/Content";
-
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,7 +29,10 @@ const Nav = () => {
         }}
       >
         {/* Nav + HR wrapper */}
-        <div className={`sticky-top ${scrolled ? "navbar-blur" : ""}`} style={{ zIndex: 1000 }}>
+        <div
+          className={`sticky-top ${scrolled ? "navbar-blur" : ""}`}
+          style={{ zIndex: 1000 }}
+        >
           <nav className="container navbar navbar-expand-lg">
             <div className="container-fluid d-flex justify-content-between">
               <div>
