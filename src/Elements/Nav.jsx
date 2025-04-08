@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
 import Atri from "../assets/Atri.jpg";
-import Content from "../components/Sections/Content";
+import Content from "../Components/Sections/Content";
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
 
